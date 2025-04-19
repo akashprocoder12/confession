@@ -1,8 +1,8 @@
 from pymongo import MongoClient
-from dotenv import load_dotenv
+
 import os
 
-load_dotenv()
-client = MongoClient(os.getenv("MONGO_URI"))
+
+client = MongoClient("mongodb+srv://proversionofakash:yXmPmDDhLvZfSx62@cluster0.eiefq2m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client.confessionDB
 confessions = db.confessions
